@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'funcionarios';
+  site1:string;
+
+constructor() { 
+  this.site1="aaaaaa bbbbbb";
+}
+  
+  ngOnInit(): void {}
+    
 }
