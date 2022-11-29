@@ -1,16 +1,20 @@
-<h1 class="mt-3">Funcionários</h1>
+<div class="col-md-12 d-flex">
+  <h1 class="mt-3">Funcionários</h1>
+  &nbsp;
+  <button
+    class="btn btn-success m-auto"
+    [routerLink]="['/funcionarios-cadastro']"
+  >
+    Cadastrar
+  </button>
+</div>
 <hr />
+
 <ol>
   <li *ngFor="let funcionario of funcionarios">
     <p>
       {{ funcionario.nome }} - <em>Matricula: {{ funcionario.matricula }}</em>
       &nbsp;
-      <button
-        class="btn btn-success ms-1"
-        [routerLink]="['/funcionarios-cadastro']"
-      >
-        Cadastrar
-      </button>
       <button
         class="btn btn-warning ms-1"
         [routerLink]="['/edicao-funcionario', funcionario.id]"

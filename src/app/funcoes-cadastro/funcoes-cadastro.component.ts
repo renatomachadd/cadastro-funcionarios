@@ -21,6 +21,8 @@ export class FuncaoCadastroComponent implements OnInit {
       [Validators.required, Validators.minLength(3), Validators.maxLength(300)],
     ],
     salario: ['', [Validators.maxLength(150), Validators.required]],
+    diasTrabalho: ['', [Validators.maxLength(150), Validators.required]],
+    documentos: ['', [Validators.maxLength(150), Validators.required]],
   });
 
   constructor(

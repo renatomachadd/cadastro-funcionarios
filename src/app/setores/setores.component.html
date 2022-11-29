@@ -1,13 +1,15 @@
-<h1 class="mt-3">Setores</h1>
-<hr />
+<div class="col-md-12 d-flex">
+  <h1 class="mt-3">Setores</h1>
+  &nbsp;
+  <button class="btn btn-success m-auto" [routerLink]="['/setores-cadastro']">
+    Cadastrar
+  </button>
+</div>
 <ol>
   <li *ngFor="let setor of setores">
     <p>
       {{ setor.nome }}
       &nbsp;
-      <button class="btn btn-success ms-1" [routerLink]="['/setores-cadastro']">
-        Cadastrar
-      </button>
       <button
         class="btn btn-warning ms-1"
         [routerLink]="['/edicao-setores', setor.id]"
@@ -18,7 +20,9 @@
         Excluir
       </button>
     </p>
-    <p>DESCRIÇÃO: {{ setor.descricao }}</p>
+    <p>Descrição: {{ setor.descricao }}</p>
     <p>Supervisor: {{ setor.supervisor }}</p>
+    <p>Local: {{ setor.local }}</p>
+    <p>Especialidade: {{ setor.especialidade }}</p>
   </li>
 </ol>

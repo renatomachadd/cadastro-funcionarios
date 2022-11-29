@@ -10,6 +10,19 @@
       "dataNascimento": "2000-01-01",
       "dataAdmissao": "2000-01-01",
       "dataDemissao": "2000-01-01"
+    },
+    {
+      "id": 2,
+      "matricula": 2121231,
+      "nome": "Rafael Lemos",
+      "email": "rafaellemos426@gmail.com",
+      "cpf": "021312321312",
+      "cargaHoraria": "2231",
+      "dataNascimento": "2000-01-01",
+      "dataAdmissao": "2000-01-01",
+      "dataDemissao": "2000-01-01",
+      "funcao": 1,
+      "setor": 1
     }
   ],
   "setores": [

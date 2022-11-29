@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { Funcionario } from '../funcionarios/funcionarios.interface';
 import { FuncionariosService } from '../funcionarios/funcionarios.service';
 import { FuncoesService } from '../funcoes/funcoes.service';
@@ -36,9 +35,9 @@ export class FuncionarioCadastroComponent implements OnInit {
     setor: ['', [Validators.required]],
   });
 
-  funcaoOptions: Observable<Array<any>> | undefined;
+  funcaoOptions: Array<any> | undefined;
 
-  setorOptions: Observable<Array<any>> | undefined;
+  setorOptions: Array<any> | undefined;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -50,8 +49,12 @@ export class FuncionarioCadastroComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.funcaoOptions = this.funcoesService.getFuncoes();
-    this.funcaoOptions = this.setoresService.getSetores();
+    this.funcoesService.getFuncoes().subscribe((response) => {
+      this.funcaoOptions = response;
+    });
+    this.setoresService.getSetores().subscribe((response) => {
+      this.setorOptions = response;
+    });
     const id = +this.activatedRoute.snapshot.params['id'];
     console.log(id);
     if (id) {

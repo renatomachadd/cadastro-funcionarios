@@ -1,22 +1,35 @@
 <h1 class="text-center fw-bolder mt-5">Cadastro de Funçoes</h1>
 <form [formGroup]="funcaoForm" (ngSubmit)="onSubmit()">
-  <div class="text-center mx-auto w-25">
-    <label for="nome">Nome:</label>
+  <div class="text-center mx-auto w-50">
+    <label for="nome" class="form-label">Nome:</label>
     <input class="form-control" id="nome" type="text" formControlName="nome" />
-    <label for="descricao">Descrição: </label>
+    <label for="descricao" class="form-label">Descrição: </label>
     <input
       class="form-control"
       id="descricao"
       type="text"
-      style="height: 150px"
       formControlName="descricao"
     />
-    <label for="salario">Salário: </label>
+    <label for="salario" class="form-label">Salário: </label>
     <input
       class="form-control"
       id="salario"
       type="text"
       formControlName="salario"
+    />
+    <label for="diasTrabalho" class="form-label">Dias trabalhados: </label>
+    <input
+      class="form-control"
+      id="diasTrabalho"
+      type="text"
+      formControlName="diasTrabalho"
+    />
+    <label for="documentos" class="form-label">Documentos Requeridos: </label>
+    <input
+      class="form-control"
+      id="documentos"
+      type="text"
+      formControlName="documentos"
     />
   </div>
   <div class="m-auto justify-content-center text-center p-3">

@@ -1,53 +1,69 @@
 <h1 class="text-center fw-bolder mt-5">Cadastro de Funcionários</h1>
 
 <form [formGroup]="funcionarioForm" (ngSubmit)="onSubmit()">
-  <div class="text-center mx-auto w-25">
-    <label for="matricula">Matrícula: </label>
+  <div class="text-center mx-auto w-50">
+    <label for="matricula" class="form-label">Matrícula: </label>
     <input
       class="form-control"
       id="matricula"
       type="number"
       formControlName="matricula"
     />
-    <label for="nome">Nome: </label>
+    <label for="nome" class="form-label">Nome: </label>
     <input class="form-control" id="nome" type="text" formControlName="nome" />
-    <label for="email">Email: </label>
+    <label for="email" class="form-label">Email: </label>
     <input
       class="form-control"
       id="email"
       type="text"
       formControlName="email"
     />
-    <label for="cpf">CPF: </label>
+    <label for="cpf" class="form-label">CPF: </label>
     <input class="form-control" id="cpf" type="text" formControlName="cpf" />
-    <label for="dataNascimento">Data de Nascimento: </label>
+    <label for="dataNascimento" class="form-label">Data de Nascimento: </label>
     <input
       class="form-control"
       id="dataNascimento"
       type="date"
       formControlName="dataNascimento"
     />
-    <label for="cargaHoraria">Carga horária de Trabalho: </label>
+    <label for="cargaHoraria" class="form-label"
+      >Carga horária de Trabalho:
+    </label>
     <input
       class="form-control"
       id="cargaHoraria"
       type="text"
       formControlName="cargaHoraria"
     />
-    <label for="dataAdmissao">Data de Admissão: </label>
+    <label for="dataAdmissao" class="form-label">Data de Admissão: </label>
     <input
       class="form-control"
       id="dataAdmissao"
       type="date"
       formControlName="dataAdmissao"
     />
-    <label for="dataDemissao">Data de Demissão: </label>
+    <label for="dataDemissao" class="form-label">Data de Demissão: </label>
     <input
       class="form-control"
       id="dataDemissao"
       type="date"
       formControlName="dataDemissao"
     />
+    <label for="funcao" class="form-label">Função</label>
+    <select class="form-control" formControlName="funcao">
+      <option [ngValue]="null" disabled>Escolha uma função</option>
+      <option *ngFor="let funcao of funcaoOptions" [ngValue]="funcao.id">
+        {{ funcao.nome }}
+      </option>
+    </select>
+    <label for="setor" class="form-label">Setor</label>
+    <select class="form-control" formControlName="setor">
+      <option [ngValue]="null" disabled>Escolha um Setor</option>
+      <option *ngFor="let setor of setorOptions" [ngValue]="setor.id">
+        {{ setor.nome }}
+      </option>
+    </select>
   </div>
   <div class="m-auto justify-content-center text-center p-3">
     <button

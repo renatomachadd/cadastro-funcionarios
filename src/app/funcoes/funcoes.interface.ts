@@ -3,4 +3,6 @@ export interface Funcoes {
   nome: string;
   descricao: string;
   salario: string;
+  diasTrabalho: string;
+  documentos: string;
 }

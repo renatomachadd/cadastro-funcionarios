@@ -3,4 +3,6 @@ export interface Setores {
   nome: string;
   descricao: string;
   supervisor: string;
+  local: string;
+  especialidade: string;
 }

@@ -24,6 +24,14 @@ export class SetorCadastroComponent implements OnInit {
       '',
       [Validators.required, Validators.minLength(3), Validators.maxLength(100)],
     ],
+    local: [
+      '',
+      [Validators.required, Validators.minLength(3), Validators.maxLength(100)],
+    ],
+    especialidade: [
+      '',
+      [Validators.required, Validators.minLength(3), Validators.maxLength(100)],
+    ],
   });
 
   constructor(
