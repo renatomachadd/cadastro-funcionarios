@@ -30,7 +30,7 @@ export class FuncionarioCadastroComponent implements OnInit {
     cargaHoraria: ['', [Validators.required]],
     dataNascimento: '2000-01-01',
     dataAdmissao: '2000-01-01',
-    dataDemissao: '2000-01-01',
+    dataDemissao: '',
     funcao: ['', [Validators.required]],
     setor: ['', [Validators.required]],
   });

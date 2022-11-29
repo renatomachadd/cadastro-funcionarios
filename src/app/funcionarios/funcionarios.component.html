@@ -29,26 +29,24 @@
 
     <p>CPF: {{ funcionario.cpf }}</p>
     <p>
-      <strong>
-        Horário de Trabalho: {{ funcionario.cargaHoraria | date: "HH:mm" }}
-      </strong>
+      <strong> Horário de Trabalho: {{ funcionario.cargaHoraria }} </strong>
     </p>
     <p>
       <em>
         Data de Nascimento:
-        {{ funcionario.dataNascimento | date: "dd/MM/YY" }}
+        {{ funcionario.dataNascimento | date: "dd/MM/YYYY" }}
       </em>
     </p>
     <p>
       <em>
         Data de Admissao:
-        {{ funcionario.dataAdmissao | date: "dd/MM/YY" }}
+        {{ funcionario.dataAdmissao | date: "dd/MM/YYYY" }}
       </em>
     </p>
     <p>
       <em>
         Data de Demissao:
-        {{ funcionario.dataDemissao | date: "dd/MM/YY" }}
+        {{ funcionario.dataDemissao | date: "dd/MM/YYYY" }}
       </em>
     </p>
   </li>
