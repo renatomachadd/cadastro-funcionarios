@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FuncaoCadastroComponent } from './funcao-cadastro.component';
+import { FuncaoCadastroComponent } from './funcoes-cadastro.component';
 
 describe('FuncaoCadastroComponent', () => {
   let component: FuncaoCadastroComponent;
@@ -8,9 +8,8 @@ describe('FuncaoCadastroComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FuncaoCadastroComponent ]
-    })
-    .compileComponents();
+      declarations: [FuncaoCadastroComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(FuncaoCadastroComponent);
     component = fixture.componentInstance;

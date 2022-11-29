@@ -1,0 +1,51 @@
+<h1 class="mt-3">Funcionários</h1>
+<hr />
+<ol>
+  <li *ngFor="let funcionario of funcionarios">
+    <p>
+      {{ funcionario.nome }} - <em>Matricula: {{ funcionario.matricula }}</em>
+      &nbsp;
+      <button
+        class="btn btn-success ms-1"
+        [routerLink]="['/funcionarios-cadastro']"
+      >
+        Cadastrar
+      </button>
+      <button
+        class="btn btn-warning ms-1"
+        [routerLink]="['/edicao-funcionario', funcionario.id]"
+      >
+        Editar
+      </button>
+      <button class="btn btn-danger ms-1" (click)="remove(funcionario)">
+        Excluir
+      </button>
+    </p>
+    <p>EMAIL: {{ funcionario.email }}</p>
+
+    <p>CPF: {{ funcionario.cpf }}</p>
+    <p>
+      <strong *ngIf="funcionario.cargaHoraria">
+        Horário de Trabalho: {{ funcionario.cargaHoraria | date: "HH:mm" }}
+      </strong>
+    </p>
+    <p>
+      <em *ngIf="funcionario.dataNascimento">
+        Data de Nascimento:
+        {{ funcionario.dataNascimento | date: "dd/MM/YY" }}
+      </em>
+    </p>
+    <p>
+      <em *ngIf="funcionario.dataAdmissao">
+        Data de Admissao:
+        {{ funcionario.dataAdmissao | date: "dd/MM/YY" }}
+      </em>
+    </p>
+    <p>
+      <em *ngIf="funcionario.dataDemissao">
+        Data de Demissao:
+        {{ funcionario.dataDemissao | date: "dd/MM/YY" }}
+      </em>
+    </p>
+  </li>
+</ol>

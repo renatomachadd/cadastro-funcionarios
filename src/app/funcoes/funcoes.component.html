@@ -1,0 +1,28 @@
+<h1 class="mt-3">Funções</h1>
+<hr />
+<ol>
+  <li *ngFor="let funcao of funcoes">
+    <p>
+      {{ funcao.nome }}
+      &nbsp;
+      <button class="btn btn-success ms-1" [routerLink]="['/funcoes-cadastro']">
+        Cadastrar
+      </button>
+      <button
+        class="btn btn-warning ms-1"
+        [routerLink]="['/edicao-funcoes', funcao.id]"
+      >
+        Editar
+      </button>
+      <button class="btn btn-danger ms-1" (click)="remove(funcao)">
+        Excluir
+      </button>
+    </p>
+    <p>DESCRIÇÃO: {{ funcao.descricao }}</p>
+    <p>
+      <strong *ngIf="funcao.salario">
+        Salário: {{ funcao.salario | currency: "R$" }}
+      </strong>
+    </p>
+  </li>
+</ol>
