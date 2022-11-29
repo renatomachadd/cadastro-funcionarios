@@ -62,6 +62,6 @@ export class FuncaoCadastroComponent implements OnInit {
   }
 
   redirect() {
-    this.router.navigate(['/funcionarios']);
+    this.router.navigate(['/funcoes']);
   }
 }

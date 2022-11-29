@@ -31,6 +31,14 @@
       "nome": "rafa",
       "descricao": "sdasdas",
       "supervisor": "asdasdasdasds"
+    },
+    {
+      "id": 2,
+      "nome": "rafa",
+      "descricao": "teste",
+      "supervisor": "rafa",
+      "local": "asdsdada",
+      "especialidade": "asdasdasdas"
     }
   ],
   "funcoes": [

@@ -22,9 +22,7 @@
     </p>
     <p>Descrição: {{ funcao.descricao }}</p>
     <p>
-      <strong *ngIf="funcao.salario">
-        Salário: {{ funcao.salario | currency: "R$" }}
-      </strong>
+      <strong> Salário: {{ funcao.salario | currency: "R$" }} </strong>
     </p>
     <p>Dias trabalhados: {{ funcao.diasTrabalho }}</p>
     <p>Documentos Requeridos: {{ funcao.documentos }}</p>
